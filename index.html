@@ -1,30 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <title>ITF-LAB-2</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="widtj=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style.css">
-    <title>Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function setUsername(){
+            document.getElementById("my_user").innerHTML = document.getElementById("setuser").value;
+        }
+        function setPictures(){
+            document.getElementById("my_picture").style.backgroundImage = "url("+document.getElementById("setpicture").value+")";
+        }
+    </script>
 </head>
 <body>
-    <h1>Resume</h1>
-    <div class="head">
-        <h2>Proplayer League of Legends</h2>
-    </div>
-    <div id="body">
-        <div class="contact">
-            <h3>Amonthep Thongpluem</h3>
-            <p><span><b>Contact</b></span>
-                <br>
-                Gmail : 66070219@kmitl.ac.th
-                <br>
-                Phone : +66 80 043 3484
-                <br>
-                IG : <a href="https://www.instagram.com/winamonthep/">winamonthep</a>
-                <img src="Screenshot 2566-10-11 at 10.33.12.png" alt="Gay King">
-            </p>
+    <main>
+        <div class="avatar">
+            <div class="pro" style="display: block;background-image: url(./avatar.jpeg);" id="my_picture">
+                <div class="notif">999+</div>
+            </div>
         </div>
-    </div>
-</div>
+        <div class="username">
+            <a id="my_user" href="https://www.instagram.com/winamonthep/"><b>Gwen Main's Gallery</b></a>
+        </div>
+        <div class="set-user">
+            <label for="set-username">Set the username</label>
+            <input type="text" id="setuser">
+            <button onclick="setUsername()">set</button>
+        </div>
+        <div class="set-url">
+            <label for="set-URL">Set the profile image URL</label>
+            <input type="text" id="setpicture">
+            <button onclick="setPictures()">set</button>
+        </div>
+        <div class="grid-container">
+            <div class="item" style="grid-column: span 2 / span 2;display: block;background-image: url(1.jpeg);"></div>
+            <div class="item" style="display: block;background-image: url(2.jpeg)"></div>
+            <div class="item" style="display: block;background-image: url(3.jpeg)"></div>
+            <div class="item" style="display: block;background-image: url(4.jpeg)"></div>
+            <div class="item" style="grid-row: span 2 / span 2;display: block;background-image: url(5.jpeg)"></div>
+            <div class="item" style="display: block;background-image: url(6.jpeg)"></div>
+            <div class="item" style="display: block;background-image: url(7.jpeg)"></div>
+            <div class="item" style="display: block;background-image: url(8.jpeg)"></div>
+            <div class="item" style="display: block;background-image: url(9.jpeg)"></div>
+            <div class="item" style="display: block;background-image: url(10.jpeg)"></div>
+        </div>
+    </main>
 </body>
 </html>
